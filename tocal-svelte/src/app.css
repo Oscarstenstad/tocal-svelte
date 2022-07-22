@@ -1,0 +1,15 @@
+body {
+    background-color: #31393c;
+    color: #21d19f;
+    font-size: 2rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+    color: #f78154;
+    font-size: 5rem;
+}
+
+div {
+    margin: .5rem;
+}
