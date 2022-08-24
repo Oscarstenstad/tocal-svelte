@@ -13,3 +13,42 @@ h1 {
 div {
     margin: .5rem;
 }
+
+#leftRightCont {
+    display: flex;
+    flex-direction: row;
+}
+
+#notesArea {
+    width: 20rem;
+    height: 20rem;
+    font-size: 1.1rem;
+    background-color: #31393c;
+    color: #21d19f;
+}
+
+#calTable {
+    border-collapse: collapse;
+}
+
+#todaysDate {
+    color: #f78154;
+    border: solid #21d19f 0.15rem;
+}
+
+.weekdayCal {
+    border: solid #f78154 0.1rem;
+    width: 5rem;
+    text-align: center;
+}
+
+.dayCal {
+    border: solid #f78154 0.1rem;
+    height: 3rem;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.dayCal:hover {
+    background-color:#7293a0;
+}

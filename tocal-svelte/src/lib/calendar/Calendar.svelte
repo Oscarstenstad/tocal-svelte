@@ -1,4 +1,6 @@
 <script>
+    import Overlay from 'svelte-materialify';
+    let today = new Date();
     let year = new Date().getFullYear();
     let month = new Date().getMonth();
     //let date = new Date().getDate();
@@ -34,6 +36,7 @@
                     }
             }
         }
+        console.log(daysInMonth);
         return daysInMonth;
     }
 
@@ -55,7 +58,7 @@
                 <thead>
                     <tr>
                     {#each weekdays as weekday}
-                        <th>{weekday}</th>
+                        <th class="weekdayCal">{weekday}</th>
                     {/each}
                     </tr>
                 </thead>
@@ -63,7 +66,11 @@
                     {#each displayCal(year, month) as week}
                         <tr>
                             {#each week as weekday} 
-                                <td>{weekday[1]}</td> 
+                                {#if weekday[0] == today.getDay() && weekday[1] == today.getDate() && month == today.getMonth() && year == today.getFullYear()}
+                                    <td class="dayCal" id="todaysDate">{weekday[1]}</td>
+                                {:else}
+                                    <td class="dayCal">{weekday[1]}</td> 
+                                {/if}
                             {/each}
                         </tr>
                     {/each}
